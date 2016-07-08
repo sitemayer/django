@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+    <table border="1">
+    <tr>
+        <td> name </td>
+        {% for stu in student %}
+        <td>{{ stu }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <td> score </td>
+        {% for score in score %}
+        <td>{{ score }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <td> level </td>
+        {% for score in score %}
+            {% if score > 80 %}
+                <td> A </td>
+            {% else %}
+                {% if score > 60 %}
+                    <td> B </td>
+                {% else %}
+                    <td> C </td>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </tr>
+
+
+</table>
+    </body>
+</html>
